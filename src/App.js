@@ -1,9 +1,22 @@
-import React from 'react';
+import React from "react";
+import {BrowserRouter, Route, Redirect, Switch} from "react-router-dom";
+import Users from "./user/pages/Users";
+import NewPlace from "./places/pages/NewPlace";
 
-function App() {
+const App = () => {
   return (
-      <h1>Let's start!</h1>
+    <BrowserRouter>
+      <Switch>
+        <Route exact={true} path={"/"}>
+          <Users />
+        </Route>
+        <Route exact={true} path={"/places/new"}>
+          <NewPlace />
+        </Route>
+        <Redirect to={"/"} />
+      </Switch>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
