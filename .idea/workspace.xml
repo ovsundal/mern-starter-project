@@ -1,13 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="06e0ca09-b3ae-4754-907e-4b6f6a81d1d2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/places/pages/NewPlace.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/places/pages/NewPlace.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1WzogY9FuF4lZC5HsXsUlfDj7Pr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\ove\WebstormProjects\mern-starter-project\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ove\WebstormProjects\mern-starter-project\src\shared\util" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06e0ca09-b3ae-4754-907e-4b6f6a81d1d2" name="Default Changelist" comment="" />
+      <created>1580993620053</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580993620053</updated>
+      <workItem from="1580993621196" duration="3256000" />
+      <workItem from="1580996916556" duration="2880000" />
+    </task>
+    <task id="LOCAL−00001" summary="add map component">
+      <created>1580994761227</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1580994761227</updated>
+    </task>
+    <task id="LOCAL−00002" summary="refactor: cleanup">
+      <created>1580995903753</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1580995903753</updated>
+    </task>
+    <task id="LOCAL−00003" summary="add Input component">
+      <created>1580997436604</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1580997436604</updated>
+    </task>
+    <task id="LOCAL−00004" summary="add input validation">
+      <created>1580998134156</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1580998134156</updated>
+    </task>
+    <task id="LOCAL−00005" summary=" add formReducer validation">
+      <created>1580999667039</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1580999667039</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add map component" />
+    <MESSAGE value="refactor: cleanup" />
+    <MESSAGE value="add Input component" />
+    <MESSAGE value="add input validation" />
+    <MESSAGE value=" add formReducer validation" />
+    <option name="LAST_COMMIT_MESSAGE" value=" add formReducer validation" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="46" y="10" width="1846" height="960" key="CommitChangelistDialog2" timestamp="1580999666466">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="46" y="10" width="1846" height="960" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580999666466" />
+    <state x="461" y="163" key="SettingsEditor" timestamp="1580996961780">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="163" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580996961780" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1580999669766">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580999669766" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1580996715980">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580996715980" />
   </component>
 </project>
