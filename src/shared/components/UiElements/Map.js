@@ -9,12 +9,12 @@ const Map = props => {
 
     useEffect(() => {
     const map = new window.google.maps.Map(mapRef.current, {
-        center: props.center,
-        zoom: props.zoom,
+        center,
+        zoom
 
     });
 
-    new window.google.maps.Marker({position: props.center, map});
+    new window.google.maps.Marker({position: center, map});
     }, [center, zoom]);
 
 
