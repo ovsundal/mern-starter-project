@@ -1,4 +1,5 @@
 import React, { useReducer, useEffect } from "react";
+
 import "./Input.css";
 import { validate } from "../util/validators";
 
@@ -24,12 +25,12 @@ const inputReducer = (state, action) => {
 const Input = props => {
   const [inputState, dispatch] = useReducer(inputReducer, {
     value: "",
-    isValid: false,
-    isTouched: false
+    isTouched: false,
+    isValid: false
   });
 
-  const {id, onInput} = props;
-  const {value, isValid} = inputState;
+  const { id, onInput } = props;
+  const { value, isValid } = inputState;
 
   useEffect(() => {
     onInput(id, value, isValid);
@@ -54,19 +55,21 @@ const Input = props => {
       <input
         id={props.id}
         type={props.type}
+        placeholder={props.placeholder}
         onChange={changeHandler}
         onBlur={touchHandler}
-        placeholder={props.placeholder}
         value={inputState.value}
       />
     ) : (
       <textarea
-        value={inputState.value}
-        onChange={changeHandler}
         id={props.id}
         rows={props.rows || 3}
+        onChange={changeHandler}
+        onBlur={touchHandler}
+        value={inputState.value}
       />
     );
+
   return (
     <div
       className={`form-control ${!inputState.isValid &&
@@ -75,7 +78,7 @@ const Input = props => {
     >
       <label htmlFor={props.id}>{props.label}</label>
       {element}
-      {!inputState.isValid && props.errorText}
+      {!inputState.isValid && inputState.isTouched && <p>{props.errorText}</p>}
     </div>
   );
 };
