@@ -8,6 +8,7 @@ import {
 import Input from "../../shared/FormElements/Input";
 import Button from "../../shared/FormElements/Button";
 import { useForm } from "../../shared/components/hooks/form-hook";
+import Card from "../../shared/components/UiElements/Card";
 
 const DUMMY_PLACES = [
   {
@@ -25,7 +26,7 @@ const DUMMY_PLACES = [
   },
   {
     id: "p2",
-    title: "Empire State Building",
+    title: "Emp State Building",
     description: "One of the most famous sky scrapers in the world!",
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/NYC_Empire_State_Building.jpg/640px-NYC_Empire_State_Building.jpg",
@@ -59,19 +60,21 @@ const UpdatePlace = () => {
   const identifiedPlace = DUMMY_PLACES.find(p => p.id === placeId);
 
   useEffect(() => {
-    setFormData(
-      {
-        title: {
-          value: identifiedPlace.title,
-          isValid: true
+    if (identifiedPlace) {
+      setFormData(
+        {
+          title: {
+            value: identifiedPlace.title,
+            isValid: true
+          },
+          description: {
+            value: identifiedPlace.description,
+            isValid: true
+          }
         },
-        description: {
-          value: identifiedPlace.description,
-          isValid: true
-        }
-      },
-      true
-    );
+        true
+      );
+    }
     setIsLoading(false);
   }, [setFormData, identifiedPlace]);
 
@@ -91,7 +94,9 @@ const UpdatePlace = () => {
   if (isLoading) {
     return (
       <div className={"center"}>
-        <h2>Could not find place</h2>
+        <Card>
+          <h2>Could not find place</h2>
+        </Card>
       </div>
     );
   }
