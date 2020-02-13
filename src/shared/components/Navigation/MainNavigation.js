@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import SideDrawer from "./SideDrawer";
-import BackDrop from '../UiElements/Backdrop'
+import BackDrop from "../UiElements/Backdrop";
 
 const MainNavigation = props => {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
@@ -15,15 +15,18 @@ const MainNavigation = props => {
 
   return (
     <React.Fragment>
-        {drawerIsOpen && <BackDrop onClick={closeDrawerHandler} />}
-        <SideDrawer show={drawerIsOpen} onClick={closeDrawerHandler}>
-          <nav className={"main-navigation__drawer-nav"}>
-            <NavLinks />
-          </nav>
-        </SideDrawer>
+      {drawerIsOpen && <BackDrop onClick={closeDrawerHandler} />}
+      <SideDrawer show={drawerIsOpen} onClick={closeDrawerHandler}>
+        <nav className={"main-navigation__drawer-nav"}>
+          <NavLinks />
+        </nav>
+      </SideDrawer>
 
       <MainHeader>
-        <button className={"main-navigation__menu-btn"} onClick={openDrawerHandler}>
+        <button
+          className={"main-navigation__menu-btn"}
+          onClick={openDrawerHandler}
+        >
           <span />
           <span />
           <span />
