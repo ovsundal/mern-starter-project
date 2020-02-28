@@ -1,47 +1,37 @@
-import React, { useEffect, useState } from "react";
-import UsersList from "../components/UsersList";
-import LoadingSpinner from "../../shared/components/UiElements/LoadingSpinner";
+import React, { useEffect, useState } from 'react';
+
+import UsersList from '../components/UsersList';
+import {useHttpClient} from "../../shared/components/hooks/http-hook";
 import ErrorModal from "../../shared/components/UiElements/ErrorModal";
+import LoadingSpinner from "../../shared/components/UiElements/LoadingSpinner";
 
 const Users = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState();
+  const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const [loadedUsers, setLoadedUsers] = useState();
 
   useEffect(() => {
-    const sendRequest = async () => {
+    const fetchUsers = async () => {
       try {
-        setIsLoading(true);
+        const responseData = await sendRequest(
+            'http://localhost:5000/api/users'
+        );
 
-        const response = await fetch("http://localhost:5000/users");
-        const responseData = await response.json();
-
-        if (!response.ok) {
-          throw new Error(responseData.message);
-        }
         setLoadedUsers(responseData.users);
-        setIsLoading(false);
-      } catch (e) {
-        setIsLoading(false);
-        setError(e.message);
-      }
+      } catch (err) {}
     };
-  }, []);
-
-  const errorHandler = () => {
-    setError(null);
-  };
+    fetchUsers();
+  }, [sendRequest]);
 
   return (
-    <React.Fragment>
-      <ErrorModal error={error} onClear={errorHandler} />
-      {isLoading && (
-        <div className={"center"}>
-          <LoadingSpinner />
-        </div>
-      )}
-      {!isLoading && loadedUsers && <UsersList items={loadedUsers} />}
-    </React.Fragment>
+      <React.Fragment>
+        <ErrorModal error={error} onClear={clearError} />
+        {isLoading && (
+            <div className="center">
+              <LoadingSpinner />
+            </div>
+        )}
+        {!isLoading && loadedUsers && <UsersList items={loadedUsers} />}
+      </React.Fragment>
   );
 };
 
