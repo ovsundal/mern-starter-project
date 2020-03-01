@@ -14,6 +14,7 @@ import Card from "../../shared/components/UiElements/Card";
 import LoadingSpinner from "../../shared/components/UiElements/LoadingSpinner";
 import ErrorModal from "../../shared/components/UiElements/ErrorModal";
 import { useHttpClient } from "../../shared/components/hooks/http-hook";
+import ImageUpload from "../../shared/FormElements/ImageUpload";
 
 export const Auth = () => {
   const auth = useContext(AuthContext);
@@ -113,6 +114,7 @@ export const Auth = () => {
               onInput={inputHandler}
             />
           )}
+          {!isLoginMode && <ImageUpload id={"image"} />}
           <Input
             element="input"
             id="email"
