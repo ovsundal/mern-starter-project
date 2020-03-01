@@ -51,6 +51,10 @@ export const Auth = () => {
           name: {
             value: "",
             isValid: false
+          },
+          image: {
+            value: null,
+            isValid: false
           }
         },
         false
@@ -61,6 +65,8 @@ export const Auth = () => {
 
   const authSubmitHandler = async event => {
     event.preventDefault();
+
+    console.log(formState.inputs);
 
     if (isLoginMode) {
       try {
@@ -114,7 +120,9 @@ export const Auth = () => {
               onInput={inputHandler}
             />
           )}
-          {!isLoginMode && <ImageUpload id={"image"} />}
+          {!isLoginMode && (
+            <ImageUpload id={"image"} center onInput={inputHandler} />
+          )}
           <Input
             element="input"
             id="email"
