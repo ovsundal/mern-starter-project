@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6bed0832-99f8-440c-a7cb-2f612967a480" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/places/components/PlaceItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/places/components/PlaceItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/places/pages/NewPlace.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/places/pages/NewPlace.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/pages/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/pages/Auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +100,7 @@
       <workItem from="1582320269284" duration="725000" />
       <workItem from="1583006252647" duration="8033000" />
       <workItem from="1583069449308" duration="3237000" />
-      <workItem from="1583182362317" duration="4207000" />
+      <workItem from="1583182362317" duration="4505000" />
     </task>
     <task id="LOCAL−00001" summary="setup starter project">
       <created>1580162236185</created>
@@ -302,7 +300,13 @@
       <option name="presentableId" value="LOCAL−00033" />
       <updated>1583185106243</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL−00034" summary="add ImageUpload">
+      <created>1583186588065</created>
+      <option name="number" value="LOCAL−00034" />
+      <option name="presentableId" value="LOCAL−00034" />
+      <updated>1583186588065</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,10 +342,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="add ImageUpload" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="80" y="20" width="1733" height="952" key="CommitChangelistDialog2" timestamp="1583185105850">
+    <state x="80" y="20" width="1733" height="952" key="CommitChangelistDialog2" timestamp="1583186587741">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="80" y="20" width="1679" height="1018" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583185105850" />
+    <state x="80" y="20" width="1679" height="1018" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583186587741" />
     <state x="2000" y="20" width="1733" height="952" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581627276092" />
     <state x="504" y="293" width="662" height="628" key="EditFileWatcherDialog" timestamp="1581114008275">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -379,10 +383,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="767" y="445" key="VCS.ChangelistChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581116508296" />
-    <state x="552" y="242" key="Vcs.Push.Dialog.v2" timestamp="1583185107937">
+    <state x="552" y="242" key="Vcs.Push.Dialog.v2" timestamp="1583186590557">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583185107937" />
+    <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583186590557" />
     <state x="2472" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581627278475" />
     <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583006274718">
       <screen x="0" y="0" width="1920" height="1040" />
