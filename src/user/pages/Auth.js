@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-
 import {
   VALIDATOR_EMAIL,
   VALIDATOR_MINLENGTH,
@@ -7,16 +6,16 @@ import {
 } from "../../shared/util/validators";
 import { AuthContext } from "../../shared/context/auth-context";
 import "./Auth.css";
+import { useHttpClient } from "../../shared/components/hooks/http-hook";
 import { useForm } from "../../shared/components/hooks/form-hook";
 import Input from "../../shared/FormElements/Input";
+import ImageUpload from "../../shared/FormElements/ImageUpload";
 import Button from "../../shared/FormElements/Button";
+import ErrorModal from "../../shared/components/UiElements/ErrorModal";
 import Card from "../../shared/components/UiElements/Card";
 import LoadingSpinner from "../../shared/components/UiElements/LoadingSpinner";
-import ErrorModal from "../../shared/components/UiElements/ErrorModal";
-import { useHttpClient } from "../../shared/components/hooks/http-hook";
-import ImageUpload from "../../shared/FormElements/ImageUpload";
 
-export const Auth = () => {
+const Auth = () => {
   const auth = useContext(AuthContext);
   const [isLoginMode, setIsLoginMode] = useState(true);
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
@@ -40,7 +39,8 @@ export const Auth = () => {
       setFormData(
         {
           ...formState.inputs,
-          name: undefined
+          name: undefined,
+          image: undefined
         },
         formState.inputs.email.isValid && formState.inputs.password.isValid
       );
@@ -66,8 +66,6 @@ export const Auth = () => {
   const authSubmitHandler = async event => {
     event.preventDefault();
 
-    console.log(formState.inputs);
-
     if (isLoginMode) {
       try {
         const responseData = await sendRequest(
@@ -77,23 +75,23 @@ export const Auth = () => {
             email: formState.inputs.email.value,
             password: formState.inputs.password.value
           }),
-          { "Content-Type": "application/json" }
-        );
-        auth.login(responseData.user.id);
-      } catch (e) {}
-    } else {
-      try {
-        const responseData = await sendRequest(
-          "http://localhost:5000/api/users/signup",
-          "POST",
-          JSON.stringify({
-            name: formState.inputs.name.value,
-            email: formState.inputs.email.value,
-            password: formState.inputs.password.value
-          }),
           {
             "Content-Type": "application/json"
           }
+        );
+        auth.login(responseData.user.id);
+      } catch (err) {}
+    } else {
+      try {
+        const formData = new FormData();
+        formData.append("email", formState.inputs.email.value);
+        formData.append("name", formState.inputs.name.value);
+        formData.append("password", formState.inputs.password.value);
+        formData.append("image", formState.inputs.image.value);
+        const responseData = await sendRequest(
+          "http://localhost:5000/api/users/signup",
+          "POST",
+          formData
         );
 
         auth.login(responseData.user.id);
@@ -121,7 +119,7 @@ export const Auth = () => {
             />
           )}
           {!isLoginMode && (
-            <ImageUpload id={"image"} center onInput={inputHandler} />
+            <ImageUpload center id="image" onInput={inputHandler} />
           )}
           <Input
             element="input"
